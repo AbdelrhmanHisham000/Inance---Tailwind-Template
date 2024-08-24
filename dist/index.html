@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inance</title>
+    <link href="./output.css" rel="stylesheet" />
+
+    <!--* Font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <!--* Font-awesome -->
+
+    <!--* start OF leaflet -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <!--* end OF leaflet -->
+  </head>
+  <body>
+    <!--* start of header -->
+    <div class="parent-header">
+      <!--* start of header-top -->
+      <header
+        class="top w-full py-4 px-6 flex-between-center bg-black text-md text-white"
+      >
+        <div class="phone-contact">
+          <i class="fa-solid fa-phone fa-sm text-orangeColor"></i>
+          <a href="">Call : +01 123455678990</a>
+        </div>
+        <div class="email-contact">
+          <i class="fa-solid fa-envelope text-orangeColor"></i>
+          <a href="">Email : demo@gmail.com</a>
+        </div>
+      </header>
+      <!--* end of header-top -->
+      <!-- start of header bottom -->
+      <header
+        class="bottom w-full py-4 px-6 flex justify-between items-center bg-lightBlue"
+      >
+        <div class="logo text-2xl font-medium text-blueColor">
+          <a href="">INANCE</a>
+        </div>
+
+        <div class="links relative">
+          <i
+            style="right: 0"
+            class="fa-solid fa-bars fa-2xl sm:opacity-100 md:opacity-0 absolute"
+          ></i>
+
+          <div
+            class="hidden absolute bg-white w-48 top-[10px] right-[20px] rounded-lg shadow-lg mt-2"
+            id="dropMenu"
+          >
+            <a class="link border-b-[1px] text-blueColor" href=""
+              >Home</a
+            >
+            <a
+              class="link border-b-[1px] hover:text-blueColor"
+              href=""
+              >About</a
+            >
+            <a
+              class="link border-b-[1px] hover:text-blueColor"
+              href=""
+              >Services</a
+            >
+            <a class="link hover:text-blueColor" href=""
+              >Contact Us</a
+            >
+          </div>
+
+          <div class="sm:hidden md:block">
+            <a class="px-6 text-blueColor" href="">Home</a>
+            <a class="px-6 hover:text-blueColor" href="">About</a>
+            <a class="px-6 hover:text-blueColor" href="">Services</a>
+            <a class="px-6 hover:text-blueColor" href="">Contact Us</a>
+          </div>
+          <!-- / -->
+        </div>
+      </header>
+      <!-- end of header bottom -->
+    </div>
+
+    <!-- end of header -->
+
+    <!--* start of landing -->
+    <section class="landing bg-lightBlue">
+      <div class="container mx-auto flex-between-center">
+        <div class="landing-info lg:basis-[60%] mt-28">
+          <p
+            class="text-5xl text-blueColor sm:block sm2:hidden md:hidden lg:block font-medium mb-10"
+          >
+            Repair and <br />Maintenance <br />Services
+          </p>
+          <p
+            class="text-5xl text-blueColor sm:hidden sm2:block lg:hidden md:block font-medium mb-12"
+          >
+            Repair and Maintenance Services
+          </p>
+          <p class="mb-6">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui harum
+            voluptatem adipisci. Quos molestiae saepe dicta nobis pariatur,
+            tempora iusto, ad possimus soluta hic praesentium mollitia
+            consequatur beatae, aspernatur culpa.
+          </p>
+          <button
+            class="py-2.5 px-12 text-white text-xl rounded bg-orangeColor border-[1px] hover:border hover:border-orangeColor duration-300 hover:bg-transparent hover:text-orangeColor mb-40"
+          >
+            Contact Us
+          </button>
+        </div>
+        <div class="landing-img flex-1">
+          <img class="sm:hidden lg:inline" src="img/slider-img.png" alt="" />
+        </div>
+      </div>
+    </section>
+    <!--* end of landing -->
+
+    <!--* start of Feature section -->
+    <section
+      class="feature-container container mx-auto sm:px-6 sm2:px-20 md:px-4 lg:px-6 2xl:px-6 grid sm:grid-cols-1 md:grid-cols-3 gap-4 sm:pt-24 md:pt-24 lg:pt-8"
+    >
+      <!--* box-1 -->
+      <div
+        class="box feature-box bg-white hover:border-none hover:bg-orangeColor"
+      >
+        <div class="mb-4">
+          <img src="img/tools.svg" class="w-20" alt="" />
+        </div>
+        <div class="icon-text box-icon-text">
+          <p>REPAIR</p>
+        </div>
+      </div>
+      <!--* box-1 -->
+
+      <!--* box-2 -->
+      <div class="box feature-box border-none border bg-orangeColor">
+        <div class="mb-4">
+          <img src="img/construction.svg" class="w-20" alt="" />
+        </div>
+        <div class="icon-text box-icon-text">
+          <p>IMPROVE</p>
+        </div>
+      </div>
+      <!--* box-2 -->
+
+      <!--* box-3 -->
+      <div
+        class="box feature-box bg-white hover:border-none hover:bg-orangeColor"
+      >
+        <div class="icon mb-4">
+          <img src="img/maintenance.svg" class="w-20" alt="" />
+        </div>
+        <div class="icon-text box-icon-text">
+          <p>MAINTAIN</p>
+        </div>
+      </div>
+      <!--* box-3 -->
+    </section>
+    <!--* end of Feature section -->
+
+    <!--* start of About Section -->
+    <section
+      class="About-us container mx-auto sm:px-0 sm2:px-4 md:px-4 lg:px-6 2xl:px-6 sm:pb-6 md:pb-24 flex items-center sm:flex-col md:flex-row"
+    >
+      <div
+        class="about-info sm:basis-[40%] md:basis-[45%] xl:2xl:basis-[50%] 2xl:basis-[60%]"
+      >
+        <p class="font-bold text-3xl mb-4">ABOUT US</p>
+        <p class="mb-8">
+          There are many variations of passages of Lorem Ipsum available, but
+          the majority have suffered alteration in some form, by injected
+          humour, or randomisedThere are many variations of passages of Lorem
+          Ipsum available, but the majority have suffered alteration in some
+          form, by injected humour, or randomised
+        </p>
+
+        <button
+          class="py-2.5 px-12 text-white text-xl bg-blueColor border-[1px] border-transparent hover:bg-transparent hover:border-blueColor hover:text-blueColor sm:mb-4 duration-300"
+        >
+          Read more
+        </button>
+      </div>
+      <div class="about-img flex-1">
+        <img src="img/about-img.jpg" alt="" />
+      </div>
+    </section>
+    <!--* end of About Section -->
+
+    <!--* start of professional_section  -->
+    <section class="professional_section bg-lightBlue py-20">
+      <div
+        class="container mx-auto sm2:px-6 md:px-1 flex items-center sm:flex-col md:flex-row"
+      >
+        <div class="professional_section basis-1/2 md:block sm:hidden">
+          <img src="./img/professional-img.png" alt="" />
+        </div>
+        <div class="Home-text flex-1">
+          <p class="text-3xl text-blueColor mb-6 pr-2 font-bold">
+            WE PROVIDE PROFESSIONAL
+            <br />HOME SERVICES.
+          </p>
+          <p class="mb-12">
+            randomised words which don't look even slightly believable. If you
+            are going to use a passage of Lorem Ipsum, you need to be sure there
+            isn't anything embarrassing hidden in the middle of text. All
+            randomised words which don't look even slightly
+          </p>
+          <button
+            class="py-2.5 px-12 text-white text-xl rounded bg-orangeColor border-[1px] hover:bg-transparent hover:border hover:border-orangeColor hover:text-orangeColor duration-300"
+          >
+            Read more
+          </button>
+        </div>
+      </div>
+    </section>
+    <!--* end of professional_section  -->
+
+    <!--* start of services section -->
+    <section class="services py-20">
+      <div class="title">Our Services</div>
+      <div
+        class="container mx-auto grid gap-8 sm:grid-cols-1 md:grid-cols-2 sm2:px-20 md:px-8 lg:grid-cols-3"
+      >
+        <!--* box-1 -->
+        <div class="box services-box">
+          <div class="icon mb-4">
+            <img src="img/s1.png" class="w-16" alt="" />
+          </div>
+          <div class="flex-coll">
+            <p class="icon-text box-icon-text mb-2">Maintenance</p>
+            <p class="text-md text-center">
+              when looking at its layout. The point of using Lorem Ipsum is that
+              it has a more-or-less normal
+            </p>
+          </div>
+        </div>
+        <!--* box-1 -->
+
+        <!--* box-2 -->
+        <div class="box services-box">
+          <div class="icon mb-4">
+            <img src="img/s2.png" class="w-16" alt="" />
+          </div>
+          <div class="flex-coll">
+            <p class="icon-word box-icon-text mb-2">Electrical</p>
+            <p class="text-md text-center">
+              when looking at its layout. The point of using Lorem Ipsum is that
+              it has a more-or-less normal
+            </p>
+          </div>
+        </div>
+        <!--* box-2 -->
+
+        <!--* box-3 -->
+        <div class="box services-box">
+          <div class="icon mb-4">
+            <img src="img/s3.png" class="w-16" alt="" />
+          </div>
+          <div class="flex-coll">
+            <p class="icon-word box-icon-text mb-2">Plumbing</p>
+            <p class="text-md text-center">
+              when looking at its layout. The point of using Lorem Ipsum is that
+              it has a more-or-less normal
+            </p>
+          </div>
+        </div>
+        <!--* box-3 -->
+      </div>
+      <div class="flex justify-center mt-14">
+        <button
+          class="py-2.5 px-12 text-xl text-white bg-blueColor hover:bg-transparent border-[1px] hover:border-blueColor hover:text-blueColor duration-300"
+        >
+          View More
+        </button>
+      </div>
+    </section>
+    <!--* end of services section -->
+
+    <!--* start of clients section -->
+    <section class="clients py-16">
+      <div class="title">WHAT OUR CLIENTS SAY</div>
+      <div
+        class="container mx-auto pt-6 grid gap-6 sm:grid-cols-1 md:grid-cols-1 sm2:px-16 md:px-4 lg:grid-cols-2"
+      >
+        <div class="clients-card">
+          <div class="first-part">
+            <div class="image">
+              <img src="img/client-1.jpg" class="rounded-full" alt="" />
+            </div>
+            <div class="clinet-name">
+              <p class="client-name-text">jorch morik</p>
+              <p class="client-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+            </div>
+            <p class="client-listen-icon">&#9835;</p>
+          </div>
+          <div class="client-text">
+            chunks as necessary, making this the first true generator on the
+            Internet. It uses a dictionary of over 200 Latin words, combined
+            with a handful of model sentence structures, to generate Lorem Ipsum
+          </div>
+        </div>
+        <div class="clients-card">
+          <div class="first-part">
+            <div class="image">
+              <img src="img/client-2.jpg" class="rounded-full" alt="" />
+            </div>
+            <div class="clinet-name">
+              <p class="client-name-text">jorch morik</p>
+              <p class="client-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+            </div>
+            <p class="client-listen-icon">&#9835;</p>
+          </div>
+          <div class="client-text">
+            chunks as necessary, making this the first true generator on the
+            Internet. It uses a dictionary of over 200 Latin words, combined
+            with a handful of model sentence structures, to generate Lorem Ipsum
+          </div>
+        </div>
+      </div>
+      <div class="arrows flex mt-10 justify-center items-center">
+        <div class="left-arr client-arrows mr-4">&#8592;</div>
+        <div class="right-arrow client-arrows ml-4">&#8594;</div>
+      </div>
+    </section>
+    <!--* end of clients section -->
+
+    <!--* start of contact-us -->
+    <div class="contact-us py-16">
+      <div
+        class="title container mx-auto lg:text-left md:text-center sm:text-center text-5xl font-medium mb-8"
+      >
+        Contact us
+      </div>
+      <div
+        class="lg:container lg:mx-auto sm:px-10 lg:px-0 flex lg:items-center lg:justify-between lg:flex-row sm:flex-col"
+      >
+        <div class="contact basis-[50%]">
+          <form>
+            <div>
+              <input class="name input-style" type="text" placeholder="Name" />
+            </div>
+            <div class="phone-number">
+              <input
+                class="input-style"
+                type="number"
+                placeholder="Phone-number"
+              />
+            </div>
+            <div class="email">
+              <input class="input-style" type="email" placeholder="Email" />
+            </div>
+            <div class="message">
+              <textarea
+                class="py-12 px-4 mb-4 w-full text-left shadow-3xl resize-none outline-none"
+                placeholder="message"
+              ></textarea>
+            </div>
+          </form>
+          <div class="flex mt-4">
+            <button
+              class="py-2 px-14 text-lg text-white bg-blueColor hover:bg-transparent border-[1px] hover:border-blueColor hover:text-blueColor duration-300"
+            >
+              SEND
+            </button>
+          </div>
+        </div>
+        <div
+          class="basis-[45%] mb-20 w-full h-[382px] lg:block sm:hidden"
+          id="map"
+        ></div>
+      </div>
+    </div>
+    <!--* end of contact-us -->
+
+    <!--* start of get in touch -->
+    <div class="get-in-touch bg-darkBlue py-20 text-white">
+      <div class="text-center text-2xl font-medium mb-8">GET IN TOUCH</div>
+      <div class="container mx-auto px-40 lg:mt-20">
+        <div
+          class="items-cont flex-between-center sm:flex-col md:flex-row lg:flex-row relative before:content-[''] lg:before:w-[79.3%] xl:before:w-[86.1%] 2xl:before:w-[87.9%] lg:before:h-[1px] before:bg-white before:absolute before:left-[78px]"
+        >
+          <!--* 1 -->
+          <div class="loaction item sm:mb-4">
+            <i class="fa-solid fa-location-dot fa-lg"></i>
+          </div>
+
+          <!--* 2 -->
+          <div class="phone item z-10 sm:mb-4">
+            <i class="fa-solid fa-phone fa-lg"></i>
+          </div>
+
+          <!--* 3 -->
+          <div class="email item md:mb-4">
+            <i class="fa-solid fa-envelope fa-lg"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="follow flex-coll items-center mt-10">
+        <p class="text-2xl font-bold">FOLLOW US</p>
+        <div class="social flex-between-center mt-6 bg-white px-4">
+          <i class="fa-brands fa-facebook-f social-color"></i>
+          <i class="fa-brands fa-twitter social-color"></i>
+          <i class="fa-brands fa-linkedin-in social-color"></i>
+          <i class="fa-brands fa-instagram social-color"></i>
+        </div>
+      </div>
+    </div>
+    <!--* end of get in touch -->
+
+    <!--* start of footer -->
+    <div class="footer py-4 bg-darkBlue">
+      <div class="container mx-auto">
+        <hr />
+        <p class="text-white text-center mt-6">Created by Abdelrhman Hisham</p>
+        <p class="text-white text-center mt-2">
+          © 2024 All Rights Reserved By Free Html Templates
+        </p>
+      </div>
+    </div>
+
+    <!--* end of footer -->
+
+    <script src="script.js"></script>
+  </body>
+</html>
